@@ -1,0 +1,3 @@
+SELECT COUNT(*) AS COUNT
+FROM Business
+WHERE States = 'CA';

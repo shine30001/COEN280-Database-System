@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+	<xs:element name="staff">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="staffname">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"></xs:minLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="staffemail">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[^@]+@[^\.]+\.(edu|com|org)"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="staffphone">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{3}\-[0-9|\-]{7,11}"></xs:pattern>
+                            <xs:minLength value="10"></xs:minLength>
+                            <xs:maxLength value="14"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="title">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"></xs:minLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="salary" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="25000"></xs:minInclusive>
+                            <xs:maxInclusive value="100000"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="staffid" type="xs:ID" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+	
+    <xs:element name="applicant">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="applicantname">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"></xs:minLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="applicantemail">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[^@]+@[^\.]+\.(edu|com|org)"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="applicantphone">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="\d{3}\-[0-9|\-]{7,11}"></xs:pattern>
+                            <xs:minLength value="10"></xs:minLength>
+                            <xs:maxLength value="14"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="dob" type="xs:date"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="applicantid" type="xs:ID" use="required"></xs:attribute>
+            <xs:attribute name="staffid" type="xs:IDREF" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+	
+    <xs:element name="event">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="description" type="xs:string"></xs:element>
+                <xs:element name="location">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Campus Center"></xs:enumeration>
+                            <xs:enumeration value="Lawn"></xs:enumeration>
+                            <xs:enumeration value="Activities Center"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="eventdate" type="xs:date"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="eventid" type="xs:ID" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+	
+    <xs:element name="attend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rating" minOccurs="1" maxOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"></xs:minInclusive>
+                            <xs:maxInclusive value="10"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="attendid" type="xs:ID" use="required"></xs:attribute>
+            <xs:attribute name="applicantid" type="xs:IDREF" use="required"></xs:attribute>
+            <xs:attribute name="eventid" type="xs:IDREF" use="required"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+	
+	<xs:element name="data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="staffs">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="staff" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="applicants">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="applicant" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="events">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="event" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="attends">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="attend" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

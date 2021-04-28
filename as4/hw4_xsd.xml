@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hw4.xsd">
+	<staffs>
+		<staff staffid="s-0001">
+			<staffname>Mike</staffname>
+			<staffemail>mike5566@scu.edu</staffemail>
+			<staffphone>669-520-6666</staffphone>
+			<title>manager</title>
+			<salary>90000</salary>
+		</staff>
+		<staff staffid="s-0002">
+			<staffname>Bruce</staffname>
+			<staffemail>bruce5566@gmail.com</staffemail>
+			<staffphone>669-521-6666</staffphone>
+			<title>vice manager</title>
+			<salary>80000</salary>
+		</staff>
+		<staff staffid="s-0003">
+			<staffname>Ryan</staffname>
+			<staffemail>ryan5566@example.org</staffemail>
+			<staffphone>669-522-6666</staffphone>
+			<title>staff</title>
+			<salary>70000</salary>
+		</staff>
+		<staff staffid="s-0004">
+			<staffname>Sean</staffname>
+			<staffemail>sean5566@gmail.com</staffemail>
+			<staffphone>669-524-6666</staffphone>
+			<title>staff</title>
+			<salary>60000</salary>
+		</staff>
+		<staff staffid="s-0005">
+			<staffname>David</staffname>
+			<staffemail>david5566@gmail.com</staffemail>
+			<staffphone>669-523-6666</staffphone>
+			<title>staff</title>
+			<salary>50000</salary>
+		</staff>
+	</staffs>
+	<applicants>
+		<applicant applicantid="a-1000" staffid="s-0005">
+			<applicantname>Jason</applicantname>
+			<applicantemail>jason5566@gmail.com</applicantemail>
+			<applicantphone>669-525-6666</applicantphone>
+			<dob>1995-02-01</dob>
+		</applicant>
+		<applicant applicantid="a-1001" staffid="s-0004">
+			<applicantname>John</applicantname>
+			<applicantemail>john5566@gmail.com</applicantemail>
+			<applicantphone>669-526-6666</applicantphone>
+			<dob>1995-02-02</dob>
+		</applicant>
+		<applicant applicantid="a-1002" staffid="s-0003">
+			<applicantname>Mark</applicantname>
+			<applicantemail>mark5566@gmail.com</applicantemail>
+			<applicantphone>669-527-6666</applicantphone>
+			<dob>1995-02-03</dob>
+		</applicant>
+		<applicant applicantid="a-1003" staffid="s-0001">
+			<applicantname>Frank</applicantname>
+			<applicantemail>frank5566@gmail.com</applicantemail>
+			<applicantphone>669-528-6666</applicantphone>
+			<dob>1995-02-04</dob>
+		</applicant>
+		<applicant applicantid="a-1004" staffid="s-0003">
+			<applicantname>Jesse</applicantname>
+			<applicantemail>jesse5566@gmail.com</applicantemail>
+			<applicantphone>669-529-6666</applicantphone>
+			<dob>1995-02-05</dob>
+		</applicant>
+		<applicant applicantid="a-1005" staffid="s-0002">
+			<applicantname>Alex</applicantname>
+			<applicantemail>alex5566@gmail.com</applicantemail>
+			<applicantphone>669-530-6666</applicantphone>
+			<dob>1995-02-06</dob>
+		</applicant>
+		<applicant applicantid="a-1006" staffid="s-0005">
+			<applicantname>Max</applicantname>
+			<applicantemail>max@gmail.com</applicantemail>
+			<applicantphone>669-531-6666</applicantphone>
+			<dob>1995-02-07</dob>
+		</applicant>
+		<applicant applicantid="a-1007" staffid="s-0004">
+			<applicantname>Brian</applicantname>
+			<applicantemail>brian5566@gmail.com</applicantemail>
+			<applicantphone>669-532-6666</applicantphone>
+			<dob>1995-02-08</dob>
+		</applicant>
+		<applicant applicantid="a-1008" staffid="s-0003">
+			<applicantname>Jerry</applicantname>
+			<applicantemail>jerry5566@gmail.com</applicantemail>
+			<applicantphone>669-533-6666</applicantphone>
+			<dob>1995-02-09</dob>
+		</applicant>
+		<applicant applicantid="a-1009" staffid="s-0002">
+			<applicantname>Roger</applicantname>
+			<applicantemail>roger5566@gmail.com</applicantemail>
+			<applicantphone>669-534-6666</applicantphone>
+			<dob>1995-02-10</dob>
+		</applicant>
+	</applicants>
+	<events>
+        <event eventid="e-2000">
+            <description>Introduction</description>
+            <location>Campus Center</location>
+            <eventdate>2021-01-01</eventdate>
+        </event>
+        <event eventid="e-2001">
+            <description>Lunch Time</description>
+            <location>Campus Center</location>
+            <eventdate>2021-01-01</eventdate>
+        </event>
+        <event eventid="e-2002">
+            <description>Interview</description>
+            <location>Lawn</location>
+            <eventdate>2020-01-01</eventdate>
+        </event>
+        <event eventid="e-2003">
+            <description>Q/A</description>
+            <location>Activities Center</location>
+            <eventdate>2020-01-01</eventdate>
+        </event>
+    </events>
+	<attends>
+        <attend attendid="at-9000" applicantid="a-1000" eventid="e-2000">
+            <rating>10</rating>
+        </attend>
+        <attend attendid="at-9001" applicantid="a-1000" eventid="e-2001">
+            <rating>10</rating>
+        </attend>
+        <attend attendid="at-9002" applicantid="a-1000" eventid="e-2002">
+            <rating>9</rating>
+        </attend>
+        <attend attendid="at-9003" applicantid="a-1000" eventid="e-2003">
+            <rating>9</rating>
+        </attend>
+        <attend attendid="at-9004" applicantid="a-1001" eventid="e-2000">
+            <rating>9</rating>
+        </attend>
+        <attend attendid="at-9005" applicantid="a-1001" eventid="e-2001">
+            <rating>8</rating>
+        </attend>
+        <attend attendid="at-9006" applicantid="a-1001" eventid="e-2002">
+            <rating>10</rating>
+        </attend>
+        <attend attendid="at-9007" applicantid="a-1001" eventid="e-2003">
+            <rating>8</rating>
+        </attend>
+        <attend attendid="at-9008" applicantid="a-1002" eventid="e-2000">
+            <rating>8</rating>
+        </attend>
+        <attend attendid="at-9009" applicantid="a-1002" eventid="e-2001">
+            <rating>5</rating>
+        </attend>
+        <attend attendid="at-9010" applicantid="a-1003" eventid="e-2000">
+            <rating>3</rating>
+        </attend>
+        <attend attendid="at-9011" applicantid="a-1004" eventid="e-2000">
+            <rating>2</rating>
+        </attend>
+        <attend attendid="at-9012" applicantid="a-1005" eventid="e-2000">
+            <rating>1</rating>
+        </attend>
+        <attend attendid="at-9013" applicantid="a-1006" eventid="e-2000">
+            <rating>9</rating>
+        </attend>
+        <attend attendid="at-9014" applicantid="a-1006" eventid="e-2001">
+            <rating>7</rating>
+        </attend>
+        <attend attendid="at-9015" applicantid="a-1006" eventid="e-2002">
+            <rating>3</rating>
+        </attend>
+        <attend attendid="at-9016" applicantid="a-1007" eventid="e-2000">
+            <rating>10</rating>
+        </attend>
+        <attend attendid="at-9017" applicantid="a-1007" eventid="e-2001">
+            <rating>6</rating>
+        </attend>
+        <attend attendid="at-9018" applicantid="a-1008" eventid="e-2000">
+            <rating>1</rating>
+        </attend>
+        <attend attendid="at-9019" applicantid="a-1009" eventid="e-2000">
+            <rating>5</rating>
+        </attend>
+    </attends>
+</data>

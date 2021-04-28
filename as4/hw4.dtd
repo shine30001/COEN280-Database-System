@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT data ((staffs, applicants, events, attends))>
+<!ELEMENT staffs ((staff*))>
+<!ELEMENT staff ((staffname, staffemail, staffphone, title, salary))>
+<!ELEMENT staffname (#PCDATA)>
+<!ELEMENT staffemail (#PCDATA)>
+<!ELEMENT staffphone (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ATTLIST staff
+	staffid ID #REQUIRED
+>
+<!ELEMENT applicants ((applicant*))>
+<!ELEMENT applicant ((applicantname, applicantemail, applicantphone, dob))>
+<!ELEMENT applicantname (#PCDATA)>
+<!ELEMENT applicantemail (#PCDATA)>
+<!ELEMENT applicantphone (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ATTLIST applicant
+	applicantid ID #REQUIRED	
+	staffid IDREF #REQUIRED
+>
+<!ELEMENT events ((event*))>
+<!ELEMENT event ((description, location, eventdate))>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT eventdate (#PCDATA)>
+<!ATTLIST event
+	eventid ID #REQUIRED
+>
+<!ELEMENT attends ((attend*))>
+<!ELEMENT attend ((rating))>
+<!ELEMENT rating (#PCDATA)>
+<!ATTLIST attend
+	attendid ID #REQUIRED
+	eventid IDREF #REQUIRED
+	applicantid IDREF #REQUIRED	
+>
